@@ -1,0 +1,18 @@
+$border-radius: 30px;
+$primary-color-dark: #155ba1;
+$primary-color-ligth: #c1dcf7;
+$color-ligth: #ffffff;
+$color-gray-ligth: #cfd3d6;
+$color-black: #182641;
+
+$secondary-color: #155ba1;
+$text-color: #333333;
+
+:root {
+  --border-radius: #{$border-radius};
+  --color-ligth: #{$color-ligth};
+  --color-black: #{$color-black};
+  --color-gray-ligth: #{$color-gray-ligth};
+  --primary-color-ligth: #{$primary-color-ligth};
+  --primary-color-dark: #{$primary-color-dark};
+}

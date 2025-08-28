@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  max-width: 1440px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-ligth);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
+}
