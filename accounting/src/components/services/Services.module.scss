@@ -1,0 +1,47 @@
+// .services {
+// }
+
+.content {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.container {
+  min-height: 798px;
+  border-radius: var(--border-radius);
+}
+
+.content > div:first-child {
+  width: 51.5%;
+  background-image: url("../../assets/Group.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content > div:last-child {
+  width: 48.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.description {
+  padding: 30px 40px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.text {
+  margin-top: 35px;
+  font-size: 20px;
+  // margin-top: 30px;
+  // margin-left: 40px;
+}
