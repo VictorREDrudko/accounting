@@ -13,7 +13,7 @@ const navigation: string[] = [
 
 export const Header = () => {
   const mappedNav = navigation.map((el) => {
-    return <a>{el}</a>;
+    return <a key={el}>{el}</a>;
   });
   return (
     <header className={styles.header}>
