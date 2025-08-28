@@ -2,6 +2,13 @@ import styles from "./Adout.module.scss";
 import slogan from "../../assets/slogan.svg";
 import { Text } from "../text/Text";
 
+const description = {
+  text1:
+    "SMAR — международная аутсорсинговая компания, которая специализируется на стратегическом аутсорсинге бизнес процессов",
+  text2:
+    "Мы помогаем клиентам концентрироваться на их собственном бизнесе и реализовывать даже самые амбициозные проекты.",
+};
+
 export const About = () => {
   return (
     <section className={styles.about}>
@@ -9,16 +16,8 @@ export const About = () => {
         <img src={slogan} alt="slogan" className={styles.slogan} />
       </div>
       <div className={styles.container}>
-        <Text
-          text={
-            "SMAR — международная аутсорсинговая компания, которая специализируется на стратегическом аутсорсинге бизнес процессов."
-          }
-        ></Text>
-        <Text
-          text={
-            "Мы помогаем клиентам концентрироваться на их собственном бизнесе и реализовывать даже самые амбициозные проекты."
-          }
-        ></Text>
+        <Text text={description.text1}></Text>
+        <Text text={description.text2}></Text>
       </div>
     </section>
   );

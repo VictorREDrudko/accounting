@@ -1,18 +1,35 @@
 .header {
-  max-width: 1269px;
+  width: 100%;
   min-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.container-a {
+  display: flex;
+  gap: 8px;
+}
+
 .logo {
-  max-width: 261px;
+  max-width: 257px;
   width: 100%;
 }
 
 .nav {
-  min-width: 698px;
+  max-width: 699px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-right: 70px;
+}
+
+.nav > div:first-child {
+  margin-right: 9px;
+}
+
+.mark {
+  margin-top: 8px;
+  width: 9px;
+  height: 9px;
 }

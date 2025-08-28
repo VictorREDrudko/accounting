@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: var(--color-ligth);
+  background-color: var(--color-white);
   box-sizing: border-box;
   display: flex;
   justify-content: center;

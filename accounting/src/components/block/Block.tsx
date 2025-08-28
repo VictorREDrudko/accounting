@@ -11,10 +11,7 @@ export const Block = ({ titleLink, text }: Props) => {
   return (
     <div className={styles.container}>
       <Link title={titleLink} className={styles.link} />
-      <Text
-        text={text}
-        className={styles.text}
-      ></Text>
+      <Text text={text} className={styles.text}></Text>
     </div>
   );
 };
