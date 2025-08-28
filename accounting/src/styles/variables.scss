@@ -1,6 +1,8 @@
 $border-radius: 30px;
 $primary-color-dark: #155ba1;
+$primary-color-extra-light: #34AAE7;
 $primary-color-ligth: #c1dcf7;
+$primary-color-pale: #E2EEFA;
 $color-ligth: #ffffff;
 $color-gray-ligth: #cfd3d6;
 $color-black: #182641;
@@ -14,5 +16,7 @@ $text-color: #333333;
   --color-black: #{$color-black};
   --color-gray-ligth: #{$color-gray-ligth};
   --primary-color-ligth: #{$primary-color-ligth};
+  --primary-color-extra-light: #{$primary-color-extra-light};
+  --primary-color-pale: #{$primary-color-pale};
   --primary-color-dark: #{$primary-color-dark};
 }
