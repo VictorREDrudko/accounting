@@ -4,16 +4,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+
+  @media (max-width: 1024px) {
+    min-height: 80px;
+    gap: 10px;
+  }
 }
 
-.container-a {
+.containerItemMenu,
+.containerLang {
   display: flex;
   gap: 8px;
+}
+
+.containerLang {
+  min-width: 50px;
 }
 
 .logo {
   max-width: 257px;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    max-width: 170px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 151px;
+  }
 }
 
 .nav {
@@ -22,10 +41,28 @@
   display: flex;
   justify-content: space-between;
   margin-right: 70px;
+  gap: 20px;
+
+  @media (max-width: 1024px) {
+    margin-right: 10px;
+    max-width: 600px;
+    gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: end;
+  }
 }
 
-.nav > div:first-child {
-  margin-right: 9px;
+.menu {
+  max-width: 610px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .mark {

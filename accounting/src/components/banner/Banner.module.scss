@@ -78,15 +78,12 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  background-color: var(--primary-color-dark);
 
   &:hover {
     background-color: var(--color-black);
     transform: scale(1.2);
   }
-
-  background-color: var(--primary-color-2);
-}
-
 
   &.active {
     background-color: var(--color-black);

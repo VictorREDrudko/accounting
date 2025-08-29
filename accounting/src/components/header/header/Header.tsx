@@ -3,7 +3,6 @@ import logo from "../../../assets/Logo-02.svg";
 import mark from "../../../assets/Mask.png";
 
 const navigation: string[] = [
-  "EN",
   "Услуги",
   "О нас",
   "Отзывы",
@@ -14,21 +13,27 @@ const navigation: string[] = [
 
 export const Header = () => {
   const mappedNav = navigation.map((el, index) => {
-    return index > 2 ? (
+    return index > 1 ? (
       <div key={index}>
         <a>{el}</a>
       </div>
     ) : (
-      <div key={index} className={styles['container-a']}>
+      <div key={index} className={styles["containerItemMenu"]}>
         <a>{el}</a>
-        <img src={mark} alt="mark" className={styles.mark}/>
+        <img src={mark} alt="mark" className={styles.mark} />
       </div>
     );
   });
   return (
     <header className={styles.header}>
       <img className={styles.logo} src={logo} alt={"logo"}></img>
-      <nav className={styles.nav}>{mappedNav}</nav>
+      <nav className={styles.nav}>
+        <div className={styles["containerLang"]}>
+          <a>{"EN"}</a>
+          <img src={mark} alt="mark" className={styles.mark} />
+        </div>
+        <div className={styles.menu}>{mappedNav}</div>
+      </nav>
     </header>
   );
 };

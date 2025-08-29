@@ -9,12 +9,15 @@
   line-height: 1.4;
   font-weight: 400;
   max-width: 1440px;
+  padding: 0 16px;
   min-height: 100vh;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
+  border: 1px solid red;
 }
 
 body {

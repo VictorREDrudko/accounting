@@ -1,41 +1,36 @@
 $border-radius: 30px;
 
-$primary-color-1: #c1dcf7;
-$primary-color-2: #155ba1;
-$primary-color-3: #0060a4;
-$primary-color-4: #004884;
+// colors
+$color-white: #ffffff;
+$color-black: #182641;
 
+$primary-color-extra-dark: #004884;
 $primary-color-dark: #155ba1;
+$primary-color: #0060a4;
 $primary-color-extra-light: #34aae7;
 $primary-color-ligth: #c1dcf7;
 $primary-color-pale: #e2eefa;
 
-$color-white: #ffffff;
-$color-gray-ligth: #cfd3d6;
+$color-gray-extra-ligth: #cfd3d6;
+$color-gray-ligth: #ecedee;
 
-$secondary-color-1: #ecedee;
-
-$color-black: #182641;
-
-// $secondary-color: #155ba1;
 $text-color: #352f36;
 
 :root {
   --border-radius: #{$border-radius};
+
   --color-white: #{$color-white};
   --color-black: #{$color-black};
 
-  --primary-color-1: #{$primary-color-1};
-  --primary-color-2: #{$primary-color-2};
-  --primary-color-3: #{$primary-color-3};
-  --primary-color-4: #{$primary-color-4};
-  --secondary-color-1: #{$secondary-color-1};
-
-  --color-gray-ligth: #{$color-gray-ligth};
-  --primary-color-ligth: #{$primary-color-ligth};
-  --primary-color-extra-light: #{$primary-color-extra-light};
-  --primary-color-pale: #{$primary-color-pale};
+  --primary-color-extra-dark: #{$primary-color-extra-dark};
   --primary-color-dark: #{$primary-color-dark};
+  --primary-color: #{$primary-color};
+  --primary-color-extra-light: #{$primary-color-extra-light};
+  --primary-color-ligth: #{$primary-color-ligth};
+  --primary-color-pale: #{$primary-color-pale};
+
+  --color-gray-extra-ligth: #{$color-gray-extra-ligth};
+  --color-gray-ligth: #{$color-gray-ligth};
 
   --text-color: #{$text-color};
 }
