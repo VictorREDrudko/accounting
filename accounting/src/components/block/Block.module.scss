@@ -2,13 +2,27 @@
   background-color: var(--color-gray-ligth);
   border-radius: var(--border-radius);
   padding: 30px 40px;
+
+  @media (max-width: 480px) {
+    padding: 30px;
+  }
 }
 
 .link {
   max-width: 390px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    font-size: 1.25rem;
+  }
 }
 
 .text {
-  margin-top: 15px;
-  font-size: 20px;
+  margin-top: 30px;
+  font-size: 1.25rem;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    font-size: 1.125rem;
+  }
 }
