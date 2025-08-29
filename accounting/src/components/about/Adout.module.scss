@@ -8,14 +8,15 @@
 }
 
 .container {
-  background-color: var(--primary-color-ligth);
+  padding: 45px 40px 30px 40px;
+  background-color: var(--primary-color-1);
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1;
-  gap: 15px;
+  gap: 30px;
 }
 
 .text {
