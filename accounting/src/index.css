@@ -16,8 +16,6 @@
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-
-  border: 1px solid red;
 }
 
 body {
