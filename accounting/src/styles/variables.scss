@@ -9,9 +9,11 @@ $primary-color: #0060a4;
 $primary-color-extra-light: #34aae7;
 $primary-color-ligth: #c1dcf7;
 $primary-color-pale: #e2eefa;
+$color-pale-light: #e5eafa;
 $color-gray-extra-ligth: #cfd3d6;
 $color-gray-ligth: #ecedee;
 $text-color: #352f36;
+$color-black: #000000;
 
 :root {
   --border-radius: #{$border-radius};
@@ -28,6 +30,8 @@ $text-color: #352f36;
 
   --color-gray-extra-ligth: #{$color-gray-extra-ligth};
   --color-gray-ligth: #{$color-gray-ligth};
+  --color-pale-light: #{$color-pale-light};
 
   --text-color: #{$text-color};
+  --color-black: #{$color-black};
 }
