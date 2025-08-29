@@ -1,10 +1,14 @@
 .container {
-  padding: 30px 40px;
   background-color: var(--color-gray-ligth);
   border-radius: var(--border-radius);
+  padding: 30px 40px;
+}
+
+.link {
+  max-width: 390px;
 }
 
 .text {
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 20px;
 }

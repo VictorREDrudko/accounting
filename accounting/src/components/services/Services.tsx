@@ -20,7 +20,7 @@ export const Services = () => {
     <section className={styles.sevices}>
       <SecondTitle title={"Наши услуги"} />
       <div className={styles.content}>
-        <div className={styles.container}>
+        <div className={styles.containerWithImg}>
           <div className={styles.description}>
             <Link title={"Бухгалтерский аутсорсинг"} className={styles.link} />
             <Text text={descriptions.text1} className={styles.text}></Text>
