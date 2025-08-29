@@ -4,30 +4,50 @@
   min-height: 290px;
   width: 100%;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 480px) {
+    gap: 20px;
+  }
 }
 
 .container {
-  padding: 45px 40px 30px 40px;
+  padding: 45px 40px 40px 40px;
   background-color: var(--primary-color-ligth);
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex: 1;
-  gap: 30px;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
-.text {
-  max-width: 575px;
+.container .text {
   font-size: 1.375rem;
+  width: 100%;
+  line-height: 1.4;
 }
 
+.about > div:first-child {
+  justify-content: center;
 
-// .container > *:last-child {
-//   margin-top: 20px;
-// }
+  @media (max-width: 480px) {
+    padding-top: 40px;
+  }
+}
 
-
-
+.slogan {
+  display: inline-block;
+  max-width: 551px;
+  width: 100%;
+}

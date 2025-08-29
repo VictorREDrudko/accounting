@@ -16,8 +16,8 @@ export const About = () => {
         <img src={slogan} alt="slogan" className={styles.slogan} />
       </div>
       <div className={styles.container}>
-        <Text text={description.text1}></Text>
-        <Text text={description.text2}></Text>
+        <Text text={description.text1} className={styles.text}></Text>
+        <Text text={description.text2} className={styles.text}></Text>
       </div>
     </section>
   );

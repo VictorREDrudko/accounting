@@ -5,3 +5,9 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 94px;
+  }
+}
