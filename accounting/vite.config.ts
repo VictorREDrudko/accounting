@@ -4,10 +4,11 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [react()],
+  base: "/accounting/",
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "/src/styles/variables.scss";',
+        additionalData: '@use "/src/styles/variables.scss";',
       },
     },
   },

@@ -13,4 +13,9 @@
   color: var(--color-gray-ligth);
   font-size: 1.25rem;
   width: 100%;
+
+  @media (max-width: 480px) {
+    text-align: center;
+    // font-size: 1.125rem;
+  }
 }
