@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import styles from "./Banner.module.scss";
+import React, { useCallback, useEffect, useRef,useState } from 'react';
 
-import { MainTitle } from "../main-title/MainTitle";
+import { MainTitle } from '../main-title/MainTitle';
+import styles from './Banner.module.scss';
 import { SLIDES } from './Constants';
 
 
@@ -73,7 +73,7 @@ export const Banner: React.FC = () => {
           <div 
             className={styles.slidesWrapper}
             style={{ 
-              transform: `translateX(${-currentSlide * 100}%)`
+              transform: `translateX(${-currentSlide * 100}%)`,
             }}
           >
             {SLIDES.map((slide, index) => (

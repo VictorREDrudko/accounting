@@ -1,28 +1,33 @@
-import { Link } from "../link/link";
-import { Text } from "../text/Text";
-import { SecondTitle } from "../second-title/SecondTitle";
-import styles from "./Services.module.scss";
-import { Block } from "../block/Block";
+import { Block } from '../block/Block';
+import { Link } from '../link/link';
+import { MainButton } from '../main-button/Mainbutton';
+import { SecondTitle } from '../second-title/SecondTitle';
+import { Text } from '../text/Text';
+import styles from './Services.module.scss';
 
 const descriptions = {
   text1:
-    "Мы подстраиваем бухгалтерский учет под ваш бизнес. Мы привносим наши  знания и опыт в эту часть вашего бизнеса, в то время как вы фокусируете  свою энергию на вашей основной деятельности.",
+    // eslint-disable-next-line max-len
+    'Мы подстраиваем бухгалтерский учет под ваш бизнес. Мы привносим наши  знания и опыт в эту часть вашего бизнеса, в то время как вы фокусируете  свою энергию на вашей основной деятельности.',
   text2:
-    "Правильное ведение кадрового учета позволяет уберечь предприятие  от штрафных санкций, дает возможность  работникам избежать проблем при оформлении пенсий, льгот, пособий и иных  выплат.",
+    // eslint-disable-next-line max-len
+    'Правильное ведение кадрового учета позволяет уберечь предприятие  от штрафных санкций, дает возможность  работникам избежать проблем при оформлении пенсий, льгот, пособий и иных  выплат.',
   text3:
-    "Налог всегда вступает в игру практически во всех аспектах бизнеса. Чтобы  избежать неожиданных убытков, необходимо обратиться к налоговым  консультантам до того, как вы входите в деловые операции. ",
+    // eslint-disable-next-line max-len
+    'Налог всегда вступает в игру практически во всех аспектах бизнеса. Чтобы  избежать неожиданных убытков, необходимо обратиться к налоговым  консультантам до того, как вы входите в деловые операции. ',
   text4:
-    "Специалисты «СМАР Аутсорсинг Солюшнс» могут помочь вам в вашем  финансовом и налоговом Due Diligence («должной осмотрительности»), чтобы  максимально увеличить стоимость предлагаемой транзакции.",
+    // eslint-disable-next-line max-len
+    'Специалисты «СМАР Аутсорсинг Солюшнс» могут помочь вам в вашем  финансовом и налоговом Due Diligence («должной осмотрительности»), чтобы  максимально увеличить стоимость предлагаемой транзакции.',
 };
 
 export const Services = () => {
   return (
-    <section className={styles.sevices}>
-      <SecondTitle title={"Наши услуги"} />
+    <section className={styles.services}>
+      <SecondTitle title={'Наши услуги'} />
       <div className={styles.content}>
         <div className={styles.containerWithImg}>
           <div className={styles.description}>
-            <Link title={"Бухгалтерский аутсорсинг"} className={styles.link} />
+            <Link title={'Бухгалтерский аутсорсинг'} className={styles.link} />
             <Text text={descriptions.text1} className={styles.text}></Text>
           </div>
         </div>
@@ -40,6 +45,9 @@ export const Services = () => {
             titleLink="Бизнес-консалтинг"
           />
         </div>
+      </div>
+      <div className={styles.buttonContainer}>
+        <MainButton />
       </div>
     </section>
   );

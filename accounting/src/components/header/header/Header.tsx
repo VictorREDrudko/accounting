@@ -1,15 +1,17 @@
-import { useState } from "react";
-import styles from "./Header.module.scss";
-import logo from "../../../assets/Logo-02.svg";
-import mark from "../../../assets/Mask.png";
+import { useState } from 'react';
+
+import logo from '../../../assets/Logo-02.svg';
+import mark from '../../../assets/Mask.png';
+import styles from './Header.module.scss';
+
 
 const navigation: string[] = [
-  "Услуги",
-  "О нас",
-  "Отзывы",
-  "Блог",
-  "SMAR Global",
-  "Контакты",
+  'Услуги',
+  'О нас',
+  'Отзывы',
+  'Блог',
+  'SMAR Global',
+  'Контакты',
 ];
 
 export const Header = () => {
@@ -46,14 +48,14 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <img className={styles.logo} src={logo} alt={"logo"} />
+      <img className={styles.logo} src={logo} alt={'logo'} />
       <nav className={styles.nav}>
         <div className={styles.containerLang}>
-          <a>{"EN"}</a>
+          <a>{'EN'}</a>
           <img src={mark} alt="mark" className={styles.mark} />
         </div>
         <div className={styles.menu}>{mappedNav}</div>
-        <div 
+        <div
           className={`${styles.burger} ${isMenuOpen ? styles.active : ''}`}
           onClick={toggleMenu}
         >

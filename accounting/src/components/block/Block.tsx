@@ -1,6 +1,6 @@
-import styles from "./Block.module.scss";
-import { Link } from "../link/link";
-import { Text } from "../text/Text";
+import { Link } from '../link/link';
+import { Text } from '../text/Text';
+import styles from './Block.module.scss';
 
 type Props = {
   titleLink: string;

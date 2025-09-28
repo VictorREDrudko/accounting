@@ -1,11 +1,12 @@
-import "./App.css";
-import { About } from "./components/about/About";
-import { Banner } from "./components/banner/Banner";
-import { Container } from "./components/container/Container";
-import { Header } from "./components/header/header/Header";
-import { MainButton } from "./components/main-button/Mainbutton";
-import { Services } from "./components/services/Services";
-import { useBurgerMenuState } from "./hooks/use-burger-menu-state";
+import './App.css';
+
+import { About } from './components/about/About';
+import { Banner } from './components/banner/Banner';
+import { Container } from './components/container/Container';
+import { Header } from './components/header/header/Header';
+import { Services } from './components/services/Services';
+import { SpecialOffer } from './components/special-offer/SpecialOffer';
+import { useBurgerMenuState } from './hooks/use-burger-menu-state';
 
 function App() {
   useBurgerMenuState();
@@ -18,9 +19,7 @@ function App() {
           <Banner />
           <About />
           <Services />
-          <div className="button-container">
-            <MainButton />
-          </div>
+          <SpecialOffer />
         </main>
       </Container>
     </>
