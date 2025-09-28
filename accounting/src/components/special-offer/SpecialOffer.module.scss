@@ -1,0 +1,57 @@
+.services {
+  width: 100%;
+  max-width: 1234px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-radius: var(--border-radius);
+  padding: 30px 40px;
+  background-image: url("../../assets/Rectangle-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.containerWithImg {
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;
+  background-image: url("../../assets/Mobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  max-width: 752px;
+}
+
+.headerText {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.offerText {
+  font-size: 44px;
+  color: var(--primary-color-extra-dark);
+  font-weight: 700;
+}
+
+.descriptionText {
+  font-size: 22px;
+}

@@ -1,5 +1,6 @@
 import { Block } from '../block/Block';
 import { Link } from '../link/link';
+import { MainButton } from '../main-button/Mainbutton';
 import { SecondTitle } from '../second-title/SecondTitle';
 import { Text } from '../text/Text';
 import styles from './Services.module.scss';
@@ -21,7 +22,7 @@ const descriptions = {
 
 export const Services = () => {
   return (
-    <section className={styles.sevices}>
+    <section className={styles.services}>
       <SecondTitle title={'Наши услуги'} />
       <div className={styles.content}>
         <div className={styles.containerWithImg}>
@@ -44,6 +45,9 @@ export const Services = () => {
             titleLink="Бизнес-консалтинг"
           />
         </div>
+      </div>
+      <div className={styles.buttonContainer}>
+        <MainButton />
       </div>
     </section>
   );
