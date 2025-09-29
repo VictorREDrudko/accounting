@@ -8,7 +8,7 @@ import styles from './SpecialOffer.module.scss';
 export const SpecialOffer = () => {
   return (
     <section className={styles.services}>
-      <SecondTitle title={'Спецпредложение'} />
+      <SecondTitle title={ConstantText.BLOCK_HEADER} />
       <div className={styles.content}>
         <div className={styles.containerWithImg} />
         <div className={styles.description}>
