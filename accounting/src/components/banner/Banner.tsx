@@ -2,38 +2,46 @@ import React, { useCallback, useEffect, useRef,useState } from 'react';
 
 import { MainTitle } from '../main-title/MainTitle';
 import styles from './Banner.module.scss';
-import { SLIDES } from './Constants';
+import { SLIDES, type SlideType } from './Constants';
 
 
 export const Banner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const autoPlayRef = useRef<number | null>(null);
 
   const goToSlide = useCallback((index: number) => {
-    if (index === currentSlide) return;
+    if (index === currentSlide || isTransitioning) return;
+    
+    setIsTransitioning(true);
     setCurrentSlide(index);
-  }, [currentSlide]);
+    
+    // Сбрасываем состояние transitioning после анимации
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 500);
+  }, [currentSlide, isTransitioning]);
 
   const nextSlide = useCallback(() => {
+    if (isTransitioning) return;
     setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-  }, []);
+  }, [isTransitioning]);
+
+  const startAutoPlay = useCallback(() => {
+    if (autoPlayRef.current !== null) {
+      window.clearTimeout(autoPlayRef.current);
+    }
+
+    autoPlayRef.current = window.setTimeout(() => {
+      nextSlide();
+    }, 5000);
+  }, [nextSlide]);
 
   useEffect(() => {
     if (!isAutoPlay) {
       return;
     }
-
-    const startAutoPlay = () => {
-      if (autoPlayRef.current !== null) {
-        window.clearTimeout(autoPlayRef.current);
-      }
-
-      autoPlayRef.current = window.setTimeout(() => {
-        nextSlide();
-      }, 5000);
-    };
-
     startAutoPlay();
 
     return () => {
@@ -41,14 +49,14 @@ export const Banner: React.FC = () => {
         window.clearTimeout(autoPlayRef.current);
       }
     };
-  }, [isAutoPlay, nextSlide, currentSlide]);
+  }, [isAutoPlay, startAutoPlay, currentSlide]);
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = useCallback(() => {
     setIsAutoPlay(false);
     if (autoPlayRef.current !== null) {
       window.clearTimeout(autoPlayRef.current);
     }
-  };
+  }, []);
 
   const handleMouseLeave = () => {
     setIsAutoPlay(true);
@@ -61,6 +69,30 @@ export const Banner: React.FC = () => {
       }
     };
   }, []);
+
+  const renderSlideContent = useCallback((slide: SlideType, index: number) => {
+    if (slide.type === 'image') {
+      return (
+        <img 
+          className={styles.image} 
+          src={slide.content as string} 
+          alt={`Слайд ${index + 1}: ${slide.title}`} 
+        />
+      );
+    } else {
+      const SlideComponent = slide.content as React.ComponentType;
+      // этот key мне нужен для перерендера слайда, чтобы началась анимация заново
+      return <SlideComponent key={`${slide.id}-${currentSlide}`} />;
+    }
+  }, [currentSlide]);
+
+  const getCurrentTitle = useCallback((): string => {
+    const currentSlideData = SLIDES[currentSlide];
+    return currentSlideData.type === 'image'
+      && currentSlideData.title
+      ? currentSlideData.title
+      : '';
+  }, [currentSlide]);
 
   return (
     <section className={styles.banner}>
@@ -78,20 +110,19 @@ export const Banner: React.FC = () => {
           >
             {SLIDES.map((slide, index) => (
               <div key={slide.id} className={styles.slide}>
-                <img 
-                  className={styles.image} 
-                  src={slide.image} 
-                  alt={`Слайд ${index + 1}: ${slide.title}`} 
-                />
+                {renderSlideContent(slide, index)}
               </div>
             ))}
           </div>
         </div>
-        <MainTitle
-          key={currentSlide}
-          title={SLIDES[currentSlide].title}
-          className={styles.title}
-        />
+        {/* Показываем MainTitle только для image слайдов */}
+        {SLIDES[currentSlide].type === 'image' && getCurrentTitle() && (
+          <MainTitle
+            key={currentSlide}
+            title={getCurrentTitle()}
+            className={styles.title}
+          />
+        )}
       </div>
       <div className={styles.pagination}>
         {SLIDES.map((_, index) => (
