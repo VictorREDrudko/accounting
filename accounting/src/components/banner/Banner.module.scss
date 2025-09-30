@@ -27,7 +27,7 @@
   display: flex;
   width: 100%;
   height: 100%;
-  transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
 }
 
@@ -35,6 +35,7 @@
   width: 100%;
   height: 100%;
   flex-shrink: 0;
+  position: relative;
 }
 
 .title {
@@ -81,11 +82,25 @@
 }
 
 .pagination {
-  width: 46px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
   margin-top: 20px;
   z-index: 3;
+  flex-wrap: wrap;
+  max-width: 90%;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    max-width: 95%;
+  }
+
+  @media (max-width: 480px) {
+    gap: 8px;
+    max-width: 100%;
+  }
 }
 
 .dots {
@@ -95,6 +110,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: var(--color-gray-extra-ligth);
+  flex-shrink: 0;
 
   &:hover {
     background-color: var(--color-black);
@@ -104,5 +120,10 @@
   &.active {
     background-color: var(--color-black);
     transform: scale(1.2);
+  }
+
+  @media (max-width: 480px) {
+    width: 8px;
+    height: 8px;
   }
 }
